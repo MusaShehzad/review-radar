@@ -1,0 +1,34 @@
+# Apps to analyze.
+#   key      short name used in file names (data/raw/<key>_reviews.csv)
+#   package  Google Play package ID: the "id=" part of the Play Store URL
+#   role     "target" = the app we are studying, "competitor" = used for benchmarking
+#   description  what the app is, as it should read in the labeling prompt ("<name>, <description>")
+#
+# Settings under `defaults` apply to every app unless the app sets its own value.
+
+defaults:
+  lang: en            # review language to request from Google Play
+  country: us         # Play Store country
+  max_reviews: 5000   # keep the N most recent reviews per app
+
+apps:
+  - key: imagineart
+    name: ImagineArt
+    package: com.vyroai.aiart          # developer: Vyro AI
+    description: an AI image and video generation app
+    role: target
+
+  # Competitors. Higgsfield and OpenArt were the first choice, but they have no official
+  # Google Play app (checked Oct 2026): every listing using their names is from an unrelated
+  # developer. Kling and PixVerse are official apps, and both are also models inside ImagineArt.
+  - key: kling
+    name: Kling AI
+    package: kling.ai.video.chat       # developer: KLING AI (klingai.com)
+    description: an AI image and video generation app
+    role: competitor
+
+  - key: pixverse
+    name: PixVerse
+    package: com.pixverseai.pixverse   # developer: PixVerse (app.pixverse.ai)
+    description: an AI image and video generation app
+    role: competitor

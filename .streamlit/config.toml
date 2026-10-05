@@ -1,0 +1,49 @@
+# Look of Streamlit's own widgets. Custom pieces (tiles, tables, cards) are styled in ui.py.
+
+[client]
+toolbarMode = "minimal"          # hide the developer menu and Deploy button for viewers
+showSidebarNavigation = false    # app.py draws its own navigation
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+font = "Instrument Sans:https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap, sans-serif"
+headingFont = "Instrument Sans, sans-serif"
+codeFont = "IBM Plex Mono:https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap, monospace"
+baseFontSize = 14
+baseRadius = "8px"
+buttonRadius = "8px"
+showWidgetBorder = true
+showSidebarBorder = true
+headingFontWeights = 600
+
+[theme.light]
+primaryColor = "#2a78d6"
+backgroundColor = "#f4f5f7"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#11161c"
+borderColor = "#e2e5ea"
+linkColor = "#2a78d6"
+blueColor = "#2a78d6"     # ImagineArt
+orangeColor = "#eb6834"   # Kling AI
+greenColor = "#1baf7a"    # PixVerse
+
+[theme.light.sidebar]
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f4f5f7"
+
+[theme.dark]
+primaryColor = "#3987e5"
+backgroundColor = "#0c0f13"
+secondaryBackgroundColor = "#13171d"
+textColor = "#e8ecf1"
+borderColor = "#262c35"
+linkColor = "#6da7ec"
+blueColor = "#3987e5"
+orangeColor = "#d95926"
+greenColor = "#199e70"
+
+[theme.dark.sidebar]
+backgroundColor = "#13171d"
+secondaryBackgroundColor = "#0c0f13"

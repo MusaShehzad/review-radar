@@ -1,0 +1,70 @@
+# Theme list, revised after reading 100 sample reviews (build step 2).
+# Added: ads, update_backlash, paywall_no_free_use, not_a_review.
+#
+#   id           short, stable key the classifier returns. Don't rename it after classifying,
+#                or old labels in the cache will no longer match.
+#   label        name shown in the dashboard
+#   description  tells the LLM exactly what belongs in this theme. This matters more than the label.
+#
+# The classifier picks exactly one primary theme per review from this list (plus an optional secondary).
+
+themes:
+  - id: billing
+    label: Billing / trial conversion / refunds
+    description: Unexpected charges, free trial turning into a paid plan, trouble cancelling, refund requests, paid plan not recognized. Only when the review mentions an actual payment, charge or subscription. A bare "scam" with no details is other.
+
+  - id: paywall_no_free_use
+    label: Paywall before first use
+    description: The app asks for payment before the user can try it, gives almost nothing free, or "it's not free". About the first session, before the user has used the app.
+
+  - id: credits_pricing
+    label: Credits & pricing
+    description: For people already using the app. How many credits things cost, running out of credits or daily limits, prices too high, poor value for money.
+
+  - id: ads
+    label: Ads
+    description: Too many or too long ads, unskippable ads, several ads in a row, or watching an ad and then nothing is generated.
+
+  - id: update_backlash
+    label: Update / redesign backlash
+    description: Complaints that an update changed the app for the worse, such as a new interface, removed features or styles, or existing (yearly or lifetime) subscribers losing what they had.
+
+  - id: content_filter
+    label: Content filter false positives
+    description: Harmless prompts or images blocked or flagged as inappropriate.
+
+  - id: quality_image
+    label: Output quality (images)
+    description: Images that look bad or distorted (faces, hands, extra limbs) or ignore the prompt.
+
+  - id: quality_video
+    label: Output quality (video)
+    description: Videos with bad motion, glitches, poor lipsync, or that ignore the prompt.
+
+  - id: model_choice
+    label: Model choice / confusion
+    description: Confusion about which model to use, a wanted model missing or removed, comparing models.
+
+  - id: ui_usability
+    label: UI / usability
+    description: Hard to find features, confusing navigation or flows, a redesign that made the app harder to use, being asked to rate the app before using it.
+
+  - id: bugs_performance
+    label: Bugs / crashes / performance
+    description: Crashes, freezes, generations that fail or never finish, slow generation, login problems.
+
+  - id: feature_request
+    label: Feature request
+    description: Asks for a new feature, option, or capability in the app. A request for one specific picture or video is a prompt typed into the review box, so use not_a_review.
+
+  - id: praise
+    label: Praise / positive
+    description: Positive feedback with no specific complaint.
+
+  - id: not_a_review
+    label: Not a review yet
+    description: The user hasn't really used the app yet ("I'll try it", "don't know yet"), or typed an image or video prompt into the review box (for example "a girl walking in the desert at sunset", in any language).
+
+  - id: other
+    label: Other
+    description: Fits none of the themes above, or gives no clear reason.

@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.DS_Store
+
+# API keys live here. Never commit it.
+.env
+
+# Raw scrapes can be re-created with scrape.py (the small store-listing snapshots are kept).
+data/raw/*
+!data/raw/*_app.json
+
+# Analyses of other apps made with run.py
+workspaces/

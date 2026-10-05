@@ -1,0 +1,28 @@
+# Which LLM labels the reviews, and how fast we call it.
+#
+# Switching provider: change `provider`, put that provider's key in .env, run classify.py again.
+# Labels are cached per model, so the new model labels every review from scratch.
+
+provider: gemini        # gemini (default, free tier) or claude
+
+reviews_per_app: 1000   # label a random sample of this many clean reviews per app, plus up to this
+                        # many from the weeks every app has data for (the competitor comparison).
+                        # Delete the line to label all. The same reviews are picked every run, so
+                        # raising the number later only labels the extra reviews.
+batch_size: 25          # reviews per request. Bigger = fewer requests, but longer answers to check.
+max_attempts: 5         # tries per request when the API is busy or rate-limited
+
+gemini:
+  model: gemini-3.5-flash-lite   # free tier. gemini-3.8-flash is smarter but slower.
+  thinking_level: minimal        # minimal | low | medium | high  (gemini-3.8-flash: low | medium | high)
+  requests_per_minute: 10        # stay under your free-tier limit: aistudio.google.com/rate-limit
+  api_key_env: GEMINI_API_KEY
+
+claude:
+  model: claude-opus-5-5         # paid. A cheaper option is claude-haiku-4-5: for it, delete `effort`
+                                 # and set refusal_fallback to false (Haiku supports neither).
+  effort: low                    # how hard the model thinks. Low is enough for labeling reviews.
+  refusal_fallback: true         # if Claude's safety checks decline a batch, the API retries it on
+                                 # Anthropic's recommended fallback model
+  requests_per_minute: 30
+  api_key_env: ANTHROPIC_API_KEY

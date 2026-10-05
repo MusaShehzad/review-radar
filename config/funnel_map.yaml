@@ -1,0 +1,70 @@
+# DRAFT: which part of the user funnel each theme hurts, and the KPI a PM would watch for it.
+# This is product judgment: review it and change anything you disagree with.
+#
+#   stage  activation     a new user getting to a first good result
+#          trial_to_paid  a free user deciding to pay
+#          retention      users (free or paid) coming back
+#          refunds        paying users asking for their money back or disputing charges
+#          none           not a problem (praise) or no clear signal
+#   kpi    the metric that would show whether fixing this theme worked
+
+themes:
+  paywall_no_free_use:
+    stage: activation
+    kpi: Share of new installs that finish a first generation before seeing a paywall
+
+  not_a_review:
+    stage: activation
+    kpi: Share of rating prompts shown before the user's first saved creation
+
+  ui_usability:
+    stage: activation
+    kpi: Time from install to first generation
+
+  content_filter:
+    stage: activation
+    kpi: Share of generation attempts blocked by the content filter
+
+  credits_pricing:
+    stage: trial_to_paid
+    kpi: Conversion rate of users who hit the credit limit
+
+  ads:
+    stage: retention
+    kpi: Rewarded ads that end in a successful generation; day-7 retention of free users
+
+  bugs_performance:
+    stage: retention
+    kpi: Generation success rate; crash-free sessions
+
+  quality_image:
+    stage: retention
+    kpi: Share of generated images that are saved or shared (vs regenerated)
+
+  quality_video:
+    stage: retention
+    kpi: Share of generated videos that are saved or shared (vs regenerated)
+
+  model_choice:
+    stage: retention
+    kpi: Generations per session after a model is picked
+
+  update_backlash:
+    stage: retention
+    kpi: Subscriber churn and average rating in the 30 days after a release
+
+  feature_request:
+    stage: retention
+    kpi: Roadmap input (count of requests per feature)
+
+  billing:
+    stage: refunds
+    kpi: Refund rate and payment disputes per 1,000 subscriptions
+
+  praise:
+    stage: none
+    kpi: Share of 4-5 star reviews
+
+  other:
+    stage: none
+    kpi: "-"
