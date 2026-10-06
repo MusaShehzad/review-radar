@@ -13,3 +13,6 @@ python-dotenv==1.2.4
 # Step 5: dashboard
 streamlit==1.65.0
 plotly==7.1.0
+
+# Publishing to Hugging Face Spaces (deploy_hf.py)
+huggingface_hub==2.1.1
