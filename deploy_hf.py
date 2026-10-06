@@ -1,4 +1,7 @@
-"""Publish the dashboard as a Hugging Face Space (free hosting with a public link).
+"""Publish the dashboard as a Hugging Face Space.
+
+Note: as of Oct 2026, Docker Spaces need a Hugging Face PRO plan; the free option is Streamlit Cloud
+(https://share.streamlit.io), which is where the live dashboard runs.
 
 One-time setup: create a free account at huggingface.co, make an access token with "write" access
 (Settings -> Access Tokens), then log in once:

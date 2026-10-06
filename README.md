@@ -7,7 +7,7 @@ with a theme, a severity and a one-line summary; a Streamlit dashboard shows the
 The default analysis covers **ImagineArt** against **Kling AI** and **PixVerse**.
 The same pipeline runs for **any app on Google Play** with one command (see below).
 
-**Live dashboard:** _add the Streamlit Cloud link here after deploying_
+**Live dashboard:** https://review-radar-app.streamlit.app
 
 
 <!--
