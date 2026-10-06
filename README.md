@@ -9,9 +9,6 @@ The same pipeline runs for **any app on Google Play** with one command (see belo
 
 **Live dashboard:** _add the Streamlit Cloud link here after deploying_
 
-## Key findings
-
-_To be written._
 
 <!--
 Facts to draw on (all from the dashboard; 1,064 labeled ImagineArt reviews, May 2025 – Oct 2026):
