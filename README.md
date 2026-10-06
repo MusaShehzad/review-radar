@@ -42,7 +42,7 @@ Needs Python 3.11+ and a free Gemini API key ([Google AI Studio](https://aistudi
 
 ```bash
 python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
+.venv/bin/pip install -r requirements-pipeline.txt   # requirements.txt has only the dashboard
 cp .env.example .env        # then paste your key after GEMINI_API_KEY=
 ```
 
